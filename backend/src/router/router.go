@@ -14,8 +14,9 @@ func RouterInit() *gin.Engine {
 	r.GET("/ping", controller.Ping)
 	//很多的路由对应动作...
 	r.GET("/category-tree", controller.CategoryTree)
+	r.POST("/category", controller.CategoryAdd)
+	r.DELETE("/category", controller.CategoryDelete)
 
 	// 返回路由引擎对象
 	return r
 }
-
